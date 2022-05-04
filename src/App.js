@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Characters from './components/Characters';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -14,7 +15,14 @@ function App() {
     fetchCharacters(initialUrl);
   }, []);
 
-  return <Navbar brand='rick & Morty' />;
+  return (
+    <>
+      <Navbar brand='rick & Morty' />
+      <div className='container'>
+        <Characters characters={characters} />
+      </div>
+    </>
+  );
 }
 
 export default App;
