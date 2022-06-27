@@ -9,7 +9,7 @@ const Pagination = ({ prev, next, onBack, onNext }) => {
     <nav>
       <ul className='pagination justify-content-center'>
         {prev ? (
-          <li className='page-item'>
+          <li className='page-item mx-2'>
             <button className='page-link' onClick={handleBack}>
               Back
             </button>
@@ -17,7 +17,7 @@ const Pagination = ({ prev, next, onBack, onNext }) => {
         ) : null}
         {next ? (
           <li>
-            <button className='page-link' onClick={handleNext}>
+            <button className='page-link ms-2' onClick={handleNext}>
               Next
             </button>
           </li>
